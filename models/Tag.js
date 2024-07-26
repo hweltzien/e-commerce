@@ -7,30 +7,18 @@ class Tag extends Model {}
 Tag.init(
   {
     // Manually define the primary key
-    tag_id: {
+    id: {
       type: DataTypes.INTEGER,
+      allowNull: false,
       primaryKey: true,
       autoIncrement: true
     },
-    // define columns
-    // title: {
-    //   type: DataTypes.STRING
-    // },
-    // author: {
-    //   type: DataTypes.STRING
-    // },
-    // isbn: {
-    //   type: DataTypes.STRING
-    // },
-    // pages: {
-    //   type: DataTypes.INTEGER
-    // },
-    // edition: {
-    //   type: DataTypes.INTEGER
-    // },
-    // is_paperback: {
-    //   type: DataTypes.BOOLEAN
-    // }
+    tag_name: {
+      type: DataTypes.STRING      
+      
+    },
+
+   
   },
   {
     sequelize,
